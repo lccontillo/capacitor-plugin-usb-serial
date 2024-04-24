@@ -241,7 +241,8 @@ public class UsbSerial implements SerialInputOutputManager.Listener {
             return jsObject;
         }
         try {
-            byte[] data = (str + "\r\n").getBytes();
+            // byte[] data = (str + "\r\n").getBytes();
+            byte[] data = HexDump.hexStringToByteArray(str);
             usbSerialPort.write(data, WRITE_WAIT_MILLIS);
             jsObject.put("data", str);
             jsObject.put("success", true);
