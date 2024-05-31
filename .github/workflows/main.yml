@@ -3,7 +3,7 @@ name: Upgrade Capacitor Plugin
 on:
   push:
     branches:
-      - main
+      - fix/android12
   workflow_dispatch:
 
 jobs:
